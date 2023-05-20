@@ -1,0 +1,227 @@
+/** @format */
+
+body {
+  padding-top: 20px;
+  background-color: #333;
+  font-family: "Montserrat";
+  font-size: 60px;
+  font-weight: bold;
+  user-select: none;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 10dvh 15dvw;
+  margin: 0 auto;
+  width: 41dvw;
+  max-width: 793px;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9dvw;
+  max-width: 180px;
+  height: 9dvw;
+  max-height: 180px;
+  background-color: #646363;
+  border-radius: 20px;
+  color: transparent;
+  box-shadow: inset 0 0 20px 20px rgba(111, 110, 110, 0.3);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.cards:hover {
+  transform: scale(1.1);
+  box-shadow: inset 0 0 20px 20px rgba(167, 167, 167, 0.3);
+}
+.cards:focus {
+  transform: none;
+}
+
+.card--active {
+  box-shadow: inset 0 0 6px 6px rgba(24, 24, 24, 0.3);
+  color: #b6b6b6;
+  cursor: pointer;
+}
+.card--active:hover {
+  box-shadow: inset 0 0 6px 6px rgba(24, 24, 24, 0.3);
+}
+.card--right {
+  background-color: #427c42;
+  box-shadow: inset 0 0 7px 7px rgba(29, 46, 20, 0.3);
+}
+.card--error {
+  color: #b6b6b6;
+  background-color: #91504e;
+  box-shadow: inset 0 0 7px 7px rgba(46, 20, 20, 0.3);
+}
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9dvw;
+  max-width: 180px;
+  height: 9dvw;
+  max-height: 180px;
+  background-color: transparent;
+  color: transparent;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
+}
+.empty:hover {
+  box-shadow: none;
+}
+.btn-play {
+  position: absolute;
+  top: 40%;
+  left: calc(50% - 175px);
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  color: #b6b6b6;
+  background-color: #427c42;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 45px;
+}
+.btn-play:hover {
+  box-shadow: 0 0 20px 20px rgba(96, 173, 114, 0.3);
+  transform: scale(1.1);
+}
+.btn-play:focus {
+  outline: none;
+  box-shadow: 0 0 20px 20px rgba(96, 173, 114, 0.3);
+  transform: scale(1.1);
+}
+.btn-play:active {
+  background-color: #376637;
+  box-shadow: inset 0 0 10px 10px rgba(29, 53, 34, 0.3);
+  transform: none;
+}
+@media (max-width: 1425px) {
+  .container {
+    width: 42dvw;
+    font-size: 47px;
+    gap: 0.4em;
+  }
+  .btn-play {
+    left: calc(50% - 154px);
+    padding: 17px 36px;
+    border-radius: 10px;
+    font-size: 35px;
+  }
+}
+@media (max-width: 1280px) {
+  .container,
+  .btn-play {
+    font-size: 35px;
+  }
+
+  .btn-play {
+    left: calc(50% - 130px);
+    padding: 17px 27px;
+    border-radius: 10px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 897px) {
+  .container {
+    gap: 0.3em;
+    padding: 3dvw 2dvw 0;
+    margin: 0 auto;
+    width: 39dvw;
+    font-size: 25px;
+  }
+  .cards {
+    width: 9dvw;
+    height: 9dvw;
+    border-radius: 10px;
+  }
+  .empty {
+    width: 9dvw;
+    height: 9dvw;
+    border-radius: 10px;
+  }
+  .cards:hover {
+    transform: none;
+  }
+  .btn-play {
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 98px);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    padding: 3dvw 2dvw;
+    width: 40dvw;
+  }
+  .cards {
+    width: 9dvw;
+    height: 9dvw;
+    border-radius: 10px;
+  }
+
+  .container {
+    gap: 0.3em;
+    font-size: 25px;
+  }
+
+  .empty {
+    width: 9dvw;
+    height: 9dvw;
+    border-radius: 10px;
+  }
+  .cards:hover {
+    transform: none;
+  }
+  .btn-play {
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 98px);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    gap: 0.3em;
+    padding: 20dvw 2dvw;
+    margin: 0 auto;
+    width: 90dvw;
+    font-size: 25px;
+  }
+  .cards {
+    width: 21dvw;
+    height: 21dvw;
+    border-radius: 10px;
+  }
+  .empty {
+    width: 21dvw;
+    height: 21dvw;
+    border-radius: 10px;
+  }
+  .cards:hover {
+    transform: none;
+  }
+  .btn-play {
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 98px);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 25px;
+  }
+}
