@@ -231,7 +231,7 @@ body {
   }
 }
 
-@media (max-width: 374px) {
+@media (max-width: 280px) {
   .container {
     width: 93dvw;
   }
