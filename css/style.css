@@ -15,7 +15,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
-  padding: 10dvh 15dvw;
+  padding: 10dvh 15dvw 0;
   margin: 0 auto;
   width: 41dvw;
   max-width: 793px;
@@ -223,5 +223,16 @@ body {
     padding: 10px 20px;
     border-radius: 6px;
     font-size: 25px;
+  }
+}
+@media (max-width: 374px) {
+  .container {
+    width: 92dvw;
+  }
+}
+
+@media (max-width: 374px) {
+  .container {
+    width: 93dvw;
   }
 }
